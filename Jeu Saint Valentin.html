@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Jeu de Piste 💕</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1 id="titre">Énigme 1 / 5</h1>
+        <div class="zone-énigme">
+            <p id="enonce-enigme"></p>  
+        </div>
+        <hr style="border: 0; height: 1px; background: #eee; margin: 15px 0;">
+        <div id="indices-container">
+            <button class="btn-indice" id="btn-idx1" onclick="afficherIndice(1)">💡 Indice 1</button>
+            <p id="indice1" class="indice cache"></p>
+            <button class="btn-indice" id="btn-idx2" onclick="afficherIndice(2)">💡 Indice 2</button>
+            <p id="indice2" class="indice cache"></p>
+            <button class="btn-indice" id="btn-idx3" onclick="afficherIndice(3)">💡 Indice 3</button>
+            <p id="indice3" class="indice cache"></p>
+        </div>
+        <input type="text" id="reponse" placeholder="Ta réponse 💕">
+        <button class="btn-valider" onclick="verifier()">❤️ Valider</button>
+        <div id="message"></div>
+        <button id="suivant" class="btn-suivant cache" onclick="enigmeSuivante()">➡️ Étape suivante</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

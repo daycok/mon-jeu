@@ -1,0 +1,105 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    /* Retour au thème Rose Romantique */
+    background: linear-gradient(135deg, #fce4ec 0%, #ffd1dc 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    transition: all 1s ease;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+h1 { color: #ff4d6d; margin-bottom: 15px; font-size: 1.5rem; }
+
+.zone-énigme { font-size: 1.1rem; color: #592020; margin-bottom: 10px; line-height: 1.4; }
+
+.indice {
+    background: #fff0f3;
+    color: #c9184a;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 0.9rem;
+    animation: fadeIn 0.4s ease;
+}
+
+.cache { display: none; }
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 15px;
+    border: 2px solid #ffb3c6;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-indice { background: #ffe6ec; color: #ff4d6d; font-size: 0.8rem; margin-bottom: 5px; padding: 10px; }
+
+.btn-valider, .btn-suivant { 
+    background: linear-gradient(135deg, #ff4d6d, #ff758f);
+    color: white; 
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+}
+
+.btn-suivant { margin-top: 20px; }
+
+/* --- STYLE POUR LE THÈME BONUS (VIOLET MYSTÉRIEUX) --- */
+body.theme-bonus {
+    background: linear-gradient(135deg, #240b36 0%, #c31432 100%);
+}
+
+body.theme-bonus .card {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+body.theme-bonus h1 { color: #6a11cb; }
+
+body.theme-bonus .indice {
+    background: #f3e5f5;
+    color: #4a148c;
+}
+
+#btn-bonus-final {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    margin-top: 40px;
+    color: white;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 5px #fff, 0 0 10px #6a11cb; }
+    to { box-shadow: 0 0 15px #fff, 0 0 25px #6a11cb; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
